@@ -1,28 +1,39 @@
 import React from 'react';
 
-export default function Guess () {
+import GuessCount from './GuessCount'
+import Feedback from './Feedback';
+
+export default function Guess(props) {
 
   const guesses = [
-    { current: '9', history:'1' },
-    { current: '25', history:'2' },
-    { current: '30', history:'3' }
+    { userGuess: '9', history: "['23', '32', '50']" },
+    { userGuess: '25', history: "['1', '5', '9']" }
   ];
 
   const guess = guesses.map( (guess, index) => (
   <div>
-    <p>{guesses.length}</p>
-    <li key={index}>
-      <p>You guessed: {guess.current} for guess#{guess.history}</p>
-    </li>
+    <p>You guessed: {guess.userGuess} </p>
+    <GuessCount guessCount="count" className="guessCount"/>
   </div>
 
   ));
 
-  return (<div>
-    <ul id="guessList" className="guessBox">
-        <p>{guess} </p>
-    </ul>
-  </div>
+  return (
+  <section className="game">
+			
+    <Feedback response="Make a Guess!" />
+    
+    <form>
+      <input type="text" name="userGuess" id="userGuess" className="text" placeholder="Enter your Guess" required/>
+      
+      <input type="submit" id="guessButton" className="button" name="submit" value="Guess"/>
+    </form>
+
+    <div>
+      {guess}
+    </div>
+
+  </section>
   )
 
 }

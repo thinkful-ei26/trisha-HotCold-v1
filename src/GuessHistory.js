@@ -1,12 +1,17 @@
 import React from 'react';
-import Guess from './Guess';
 
-export default function GuessHistory () {
+export default function GuessHistory(props) {
+
+  // const guesses = props.guesses.map((guess, index) => (
+  //   <li key={index}>
+  //     {guess}
+  //   </li>
+  // ));
 
   return (
-  <div>
-    <p className="guessHistory">Guess#{Guess.length}</p>
-  </div>
-  )
+    <li className="guessHistory">
+      {props.guesses}
+    </li>
+  );
 
 }
