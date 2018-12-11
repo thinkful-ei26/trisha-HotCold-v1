@@ -1,15 +1,16 @@
 import React from 'react';
-import Guess from './Guess';
-import GuessHistory from './GuessHistory'
+import GuessSection from './GuessSection';
+import GuessHistory from './GuessHistory';
+import Nav from './Nav';
+import Header from './Header';
 
 export default function Game (props) {
 
   return (
     <div className="container">
-      <header className="Game-header">
-        <h1>Hot or Cold</h1>
-      </header>
-      <Guess />
+      <Nav />
+      <Header />
+      <GuessSection />
 
       <ul id="guessList" className="guessBox">
         <GuessHistory guesses="[1, 2, 3]"/>

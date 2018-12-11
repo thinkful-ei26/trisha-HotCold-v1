@@ -4,6 +4,7 @@
 
 body {
   background-color: #1F253D;
+  color: white;
 }
 
 .container {
@@ -37,4 +38,21 @@ body {
   color: #f39c12;
   font-weight: 700;
   font-size: 1.5em;
+}
+
+.menu {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

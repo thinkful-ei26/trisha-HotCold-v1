@@ -3,7 +3,7 @@ import React from 'react';
 import GuessCount from './GuessCount'
 import Feedback from './Feedback';
 
-export default function Guess(props) {
+export default function GuessSection(props) {
 
   const guesses = [
     { userGuess: '9', history: "['23', '32', '50']" },
